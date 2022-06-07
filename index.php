@@ -9,7 +9,7 @@
   $hiddenWord = $_GET["hiddenWord"];
   
   /* Con replace sostituisco la parola che voglio con altro */
-  $frasecensurata = str_replace("Hello", "***", $frase);
+  $frasecensurata = str_replace($hiddenWord, "***", $frase);
 
 ?>
 
