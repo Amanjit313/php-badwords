@@ -2,10 +2,7 @@
   /* Creo una variabile con un paragrafo di testo*/
   $frase = "Hello PHP!";
 
-  /* Con var dump ho tutte le info necessarie di questo elemento stampate in pagina */
-  var_dump([$frase]);
-  
-  /* Dichiaro la mia parola nascosta e la inserisco nel mio link */
+  /* Dichiaro la mia parola nascosta e la inserisco nel mio URL */
   $hiddenWord = $_GET["hiddenWord"];
   
   /* Con replace sostituisco la parola che voglio con altro */
@@ -24,16 +21,14 @@
 <body>
 
   <!-- Stampo la mia frase nella mia pagina -->
-  <h1><?php echo $frase; ?></h1>
+  <h1>La mia frase: <?php echo $frase; ?></h1>
+  <!-- Stampo la lunghezza della mia frase in caratteri -->
+  <p>La frase è lunga: <?php echo strlen($frase); ?> caratteri</p>
 
-  <!-- Stampo la mia parola nascosta -->
-  <h1><?php echo $hiddenWord; ?></h1>
-  
   <!-- Stampo la mia frase censurata e la sua var dump per avere le info del mio nuovo elemento-->
-  <h1><?php echo $frasecensurata; 
-      var_dump([$frasecensurata]);
-      ?>
-  </h1>
+  <h1>La mia nuova frase: <?php echo $frasecensurata;?></h1>
+  <!-- Stampo la lunghezza della mia nuova frase in caratteri -->
+  <p>La frase è lunga: <?php echo strlen($frasecensurata); ?> caratteri</p>
 
 </body>
 </html>
